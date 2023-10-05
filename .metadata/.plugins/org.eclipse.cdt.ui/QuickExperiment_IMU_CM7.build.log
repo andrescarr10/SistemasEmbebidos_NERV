@@ -1,0 +1,64 @@
+14:41:59 **** Incremental Build of configuration Debug for project QuickExperiment_IMU_CM7 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:187:13: error: invalid storage class for function 'MX_SPI1_Init'
+  187 | static void MX_SPI1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:232:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  232 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:277:13: error: invalid storage class for function 'MX_USART3_UART_Init'
+  277 | static void MX_USART3_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:322:13: error: invalid storage class for function 'MX_GPIO_Init'
+  322 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:387:1: error: expected declaration or statement at end of input
+  387 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:35:13: warning: 'MX_GPIO_Init' used but never defined
+   35 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:36:13: warning: 'MX_USART3_UART_Init' used but never defined
+   36 | static void MX_USART3_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:37:13: warning: 'MX_USART2_UART_Init' used but never defined
+   37 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:38:13: warning: 'MX_SPI1_Init' used but never defined
+   38 | static void MX_SPI1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:383:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  383 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:369:6: warning: 'mpu9250_read_reg' defined but not used [-Wunused-function]
+  369 | void mpu9250_read_reg(uint8_t reg, uint8_t *data, uint8_t len)
+      |      ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:362:6: warning: 'mpu9250_write_reg' defined but not used [-Wunused-function]
+  362 | void mpu9250_write_reg(uint8_t reg, uint8_t data)
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:322:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  322 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:277:13: warning: 'MX_USART3_UART_Init' defined but not used [-Wunused-function]
+  277 | static void MX_USART3_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:232:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  232 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:187:13: warning: 'MX_SPI1_Init' defined but not used [-Wunused-function]
+  187 | static void MX_SPI1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:168:6: warning: 'PeriphCommonClock_Config' defined but not used [-Wunused-function]
+  168 | void PeriphCommonClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:108:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  108 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+14:42:00 Build Failed. 6 errors, 13 warnings. (took 369ms)
+

@@ -1,0 +1,10 @@
+20:33:08 **** Incremental Build of configuration Debug for project stm32H7_uart_CM4 ****
+make -j12 all 
+arm-none-eabi-size   stm32H7_uart_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4316	     24	   1568	   5908	   1714	stm32H7_uart_CM4.elf
+Finished building: default.size.stdout
+ 
+
+20:33:08 Build Finished. 0 errors, 0 warnings. (took 629ms)
+
